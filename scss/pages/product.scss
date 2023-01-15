@@ -1,0 +1,203 @@
+@use "../global.scss";
+@use "../base/typography";
+@use "../layout/header";
+@use "../layout/container";
+@use "../layout/footer";
+@use "../components/product-card";
+
+
+.leaders {
+    .compasition-title {
+        padding-top: 10px;
+        h2 {
+            padding-bottom: 20px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 130%;
+            letter-spacing: 0.03em;
+            color: #000000;
+        }
+        p {
+            padding-bottom: 30px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 130%;
+            color: #000000;
+        }
+    }
+    .compasition-input {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+        .compasition__sort {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            label {
+                padding-left: 20px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 130%;
+                letter-spacing: 0.03em;
+                color: #000000;
+            }
+            select {
+                width: 219px;
+                height: 40px;
+                border: 1px solid #000000;
+                border-radius: 7px; 
+                outline: none; 
+                option {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 130%;
+                    letter-spacing: 0.03em;
+                    color: #797979;
+                } 
+            }
+        }
+       .compasition-input__contents {
+        display: flex;
+        align-items: center;
+        .compasition__sum {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            label {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 130%;
+                letter-spacing: 0.03em;
+                color: #000000;
+            }
+            input {
+                width: 103px;
+                height: 42px;
+                border: 1px solid #000000;
+                border-radius: 7px;
+                padding: 0 0 0 10px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 130%;
+                letter-spacing: 0.03em;
+                color: #ACACAC;
+                outline: none;
+            }
+        }
+        .compasition__checkbox {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            label {
+                padding-left: 20px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 130%;
+                letter-spacing: 0.03em;
+                color: #000000;
+            }
+            input {
+                width: 40px;
+                height: 40px;
+            }
+        }
+       }
+    }
+}
+
+
+@media (max-width: 1110px) {
+    .leaders {
+        .compasition-title {
+            h2 {
+                text-align: center;
+                font-size: 32px;
+            }
+            p {
+                display: none;
+            }
+        }
+        .compasition-input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .compasition__sort {
+                margin-top: 20px;
+            }
+            .compasition-input__contents {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .leaders {
+        .compasition-title {
+            h2 {
+                font-size: 24px;
+            }
+        }
+        .compasition-input {
+            .compasition-input__contents {
+                display: grid;
+                grid-template-columns: 1fr;
+                .compasition__sum {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .leaders {
+        .compasition-input {
+            .compasition__sort {
+                select {
+                    width: 150px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .leaders {
+        .compasition-title {
+            h2 {
+                font-size: 20px;
+            }
+        }
+        .compasition-input {
+            .compasition-input__contents {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .compasition__sum {
+                    input {
+                        width: 80px;
+                    }
+                }
+                .compasition__checkbox {
+                    input {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+            .compasition__sort {
+                display: none;
+            }
+        }
+    }
+}

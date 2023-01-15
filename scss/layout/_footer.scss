@@ -1,0 +1,250 @@
+@use "../layout/container";
+@use "../base/reset";
+@use "../abstracts/variables";
+
+
+.contact {
+    display: flex;
+    // justify-content: space-between;
+    .contact-left {
+        h2 {
+            padding-bottom: 25px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 130%;
+            color: #000000;
+        }
+        tel {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 70px;
+            line-height: 130%;
+            color: #000000;
+        }
+        .contact-left-image {
+            display: flex;
+            align-items: center;
+            padding: 32px 0 48px;
+            text-align: center;
+            .contact-left__img {
+                img {
+                    width: 50px;
+                    height: 50px;
+                    padding-bottom: 10px;
+                }
+                p {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 130%;
+                    color: #000000;
+                }
+            }
+            .contact-left__img:last-child {
+                padding-left: 33px;
+            }
+        }
+    }
+    .contact-right {
+        padding-left: 232px;
+        h2 {
+            padding-bottom: 25px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 130%;
+            color: #000000;
+        }
+        h3 {
+            padding-bottom: 20px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 130%;
+            color: #000000;
+        }
+        span {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 130%;
+            color: #000000;
+        }
+        p {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 130%;
+            color: #000000;
+        }
+    }
+}
+
+.contact-responsive {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .contact {
+        .contact-left {
+            tel {
+                font-size: 50px;
+            }
+        }
+        .contact-right {
+            h3 {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .contact {
+        .contact-left {
+            h2 {
+                font-size: 30px;
+            }
+            tel {
+                font-size: 30px;
+            }
+        }
+        .contact-right {
+            h2 {
+                font-size: 30px;
+            }
+            h3 {
+                font-size: 30px;
+            }
+            span {
+                font-size: 18px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .contact {
+        display: none;
+    }
+    .contact-responsive {
+        display: block;
+        display: flex;
+        .contact-left {
+            padding-left: 50px;
+            h2 {
+                padding-bottom: 15px;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 130%;
+                color: #000000;
+            }
+            tel {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 26px;
+                line-height: 130%;
+                color: #000000;
+            }
+            .contact-left-image {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                padding-top: 15px;
+                .contact-left__img {
+                    padding-right: 10px;
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                    p {
+                        padding-top: 10px;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 130%;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+        .contact-right {
+            // padding-left: 10px;
+            h2 {
+                padding-bottom: 10px;
+                text-align: center;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 130%;
+                color: #000000;
+            }
+            h3 {
+                padding-bottom: 10px;
+                width: 250px;
+                text-align: center;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 130%;
+                color: #000000;
+            }
+            h5 {
+                text-align: center !important;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 130%;
+                color: #000000;
+            }
+            p {
+                text-align: center;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 130%;
+                color: #000000;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .contact-left {
+            padding-right: 50px;
+            .contact-left__img {
+                padding-left: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 340px) {
+    .contact-responsive {
+        .contact-left {
+            h2 {
+                font-size: 18px;
+            }
+            tel {
+                font-size: 22px;
+            }
+        }
+        .contact-right {
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+}
+    
